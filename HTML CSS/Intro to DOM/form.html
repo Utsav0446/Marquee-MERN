@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+    <style>
+        input{
+          border: none;
+          border-bottom: 1px dotted;
+        }
+
+        #AtheleteInfo{
+            font-weight: bold;
+        }
+        #Medical-History{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form in HTML</h2>
+    <form action="actionPage.html" method="get">
+        <fieldset>
+            <legend id="AtheleteInfo">Athelete Information</legend>
+            <ul>
+                <li>
+                    <label for="name">Name: </label>
+                    <input type="text" 
+                        id ="name"
+                        name = "name" 
+                        placeholder="Enter your name"
+                        required>
+                </li>
+                <li>
+                    <label for="school">School/Team:</label>
+                    <input 
+                        type="text" 
+                        id="school" 
+                        name = "school"
+                        placeholder="Enter your school or Team"
+                        readonly>
+                </li>
+                <li>
+                    <label for="sport">Sport: </label>
+                    <input
+                        type="text" 
+                        id = "sport" 
+                        name = "sport"
+                        placeholder="Enter your Sports"
+                        required>
+                </li>
+                <li>
+                    <label for="parent">Parent/Guardian Name: </label>
+                    <input 
+                        type="text" 
+                        id="parent"
+                        name="parent" 
+                        placeholder="Name"
+                        required>
+                </li>
+                <li>
+                    <label for="contact">Contact Number: </label>
+                    <input 
+                        type="text" 
+                        id = "contact"
+                        name="contact" 
+                        placeholder="Example: +91 54561237891"
+                        required>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend id="Medical-History">Medical History for Athelete</legend>
+            <ul>
+                <li>
+                    <p>History of Concussions:</p>
+                    
+                    <input 
+                        type="radio"
+                        name="concussions" 
+                        id="concussions-yes"
+                        required>
+                    <label for="">Yes</label>
+                    
+                    <input 
+                        type="radio"
+                        name="concussions" 
+                        id="concussions-no"
+                        required>
+                    <label for="">No</label>
+                </li>
+                <li>
+                    <label for="surgeries">Previous Surgeries</label>
+                    <input 
+                        type="text" 
+                        id="surgeries" 
+                        name = "surgeries"
+                        placeholder="previous surgeries"
+                        required>
+                </li>
+                <li>
+                    <p>Any bone fractures?</p>
+                    
+                    <input type="radio" name="fractRadio" id ="fractRadio-yes" required>
+                    <label for="fractRadio">Yes</label>
+                    
+                    <input type="radio" name="fractRadio" id="fractRadio-no" required>
+                    <label for="fractRadio">No</label>
+                </li>
+                <li>
+                    <p>Asthama or breathing problems: </p>
+                    
+                    <input 
+                        type="radio" 
+                        name="breathRadio" 
+                        id="breathRadio-yes"
+                        value="yes"
+                        required>
+                    <label for="breathRadio">Yes</label>
+                    
+                    <input 
+                        type="radio" 
+                        name="breathRadio" 
+                        id="breathRadio-no" 
+                        value="no"
+                        required>
+                    <label for="breathRadio">No</label>
+                    
+                </li>
+            </ul>
+        </fieldset>
+
+
+        <fieldset>
+            <Legend>Date/Time</Legend>
+            <ul>
+                <li>
+                    <label for="dob">DOB</label>
+                    <input 
+                        type="date" 
+                        name = "dob" 
+                        id="dob"
+                        required>
+                </li>
+                <li>
+                    <label for="time">Time</label>
+                    <input 
+                        type="time"
+                        name="time"
+                        id="dob"
+                        required>
+                </li>
+                <li>
+                    <label for="date-time">Time</label>
+                    <input 
+                        type="datetime-local"
+                        name="date-time"
+                        id="date-time"
+                        required>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Textarea</legend>
+            <ul>
+                <li>
+                    <p>Summary Of your last operations:</p>
+                    <textarea 
+                        name="" id="" 
+                        rows="7" 
+                        cols="50" 
+                        placeholder="enter the summary"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>File Input</legend>
+            <label for="Medical-file">Drop your last Medical Report: </label>
+            <input 
+                type="file" 
+                name="Medical-file" 
+                id="Medical-file"
+                accept=".pdf,.html,.img">
+        </fieldset>
+
+        <fieldset>
+            <legend>CheckBox/Select/Number</legend>
+            
+            <ul>
+                <li>
+                    <input 
+                        type="checkbox" 
+                        id="terms-Condi" 
+                        name="terms-Condi"
+                        value="terms-Condition-Yes"
+                        required>
+                    <label for="terms-Condi">Have you read those Terms and Conditions?</label>
+                </li>
+            </ul>
+        </fieldset>
+        
+        <fieldset>
+            <legend>Number Input</legend>
+            <label for="num-inp">percentage of HB in body?</label>
+            <input type="number" name ="num-inp" id="num-inp">
+        </fieldset>
+
+        <fieldset>
+            <legend>Select</legend>
+            <label for="states">Select your State:</label>
+            <select name="ststes" id="states">
+                <option value="null">--Select your State--</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Gujarat" id="Gujarat">Gujarat</option>
+                <option value="Punjab" id="Punjab">Punjab</option>
+                <option value="Chhattisgarh" id="Chhattisgarh">Chandigarh</option>
+                <option value="Utterpradesh" id="Utterpradesh">Utter Pradesh</option>
+                <option value="Bihar" id="Bihar">Bihar</option>
+                <option value="Tamilnadu" id="Tamilnadu">Tamilnadu</option>
+            </select>
+        </fieldset>
+        
+        <fieldset>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="range">
+                <input 
+                    type="range"
+                    name="range"
+                    id="range"
+                    min="0"
+                    max="10"
+                    value="6">
+            </label>
+        </fieldset>
+
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+
+    </form>
+</body>
+</html>

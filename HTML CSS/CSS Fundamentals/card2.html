@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Card</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#f5e8df;
+    }
+
+    .card{
+      width:260px;
+      background:#fff;
+      border-radius:28px;
+      padding:18px;
+      position:relative;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .favorite{
+      position:absolute;
+      top:15px;
+      left:15px;
+      width:34px;
+      height:34px;
+      background:#e7c7a8;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+    }
+
+    .product-image{
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      border-radius:20px;
+    }
+
+    .content{
+      margin-top:10px;
+    }
+
+    .colors{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      margin-bottom:12px;
+    }
+
+    .dot{
+      width:14px;
+      height:14px;
+      border-radius:50%;
+    }
+
+    .dot.beige{
+      background:#c8a17a;
+    }
+
+    .dot.orange{
+      background:#f59d2f;
+    }
+
+    .dot.black{
+      background:#000;
+    }
+
+    h3{
+      color:#c28b3c;
+      font-size:20px;
+      font-weight:800;
+      margin-bottom:8px;
+    }
+
+    .price{
+      display:inline-block;
+      background:#111;
+      color:#fff;
+      padding:5px 10px;
+      border-radius:12px;
+      font-size:12px;
+      font-weight:bold;
+      margin-bottom:12px;
+    }
+
+    .desc{
+      font-size:12px;
+      color:#999;
+      line-height:1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="favorite">❤</div>
+
+    <img 
+      src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800&auto=format&fit=crop" 
+      alt="Product"
+      class="product-image"
+    >
+
+    <div class="content">
+
+      <div class="colors">
+        <div class="dot beige"></div>
+        <div class="dot orange"></div>
+        <div class="dot black"></div>
+      </div>
+
+      <h3>PRODUCT NAME</h3>
+
+      <div class="price">$41.00 USD</div>
+
+      <p class="desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Molestias officia natus rerum.
+      </p>
+
+    </div>
+  </div>
+
+</body>
+</html>
